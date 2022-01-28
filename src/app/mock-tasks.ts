@@ -1,6 +1,6 @@
 import { Task } from "./Task"
 
-export const TASKS: Task = [
+export const TASKS: Task[] = [
   {
     id:1,
     tarea: "Terminar el proyecto 'Lista de Tareas'",
