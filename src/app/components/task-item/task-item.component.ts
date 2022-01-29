@@ -1,7 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
-import {Task} from '../../Task'
+import { faEdit, faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
+
 import { TASKS } from 'src/app/mock-tasks';
-import { faCoffee } from '@fortawesome/free-solid-svg-icons';
+import { Task } from '../../Task';
 
 @Component({
   selector: 'app-task-item',
@@ -9,15 +10,11 @@ import { faCoffee } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() task:Task = 
-  { 
-    id:1,
-    tarea:"gola",
-    fecha:"asdasd",
-    recordatorio:true
-  };
-  faCoffee = faCoffee;
-  
+  @Input() task:Task = TASKS[0];
+  faTimes = faTimes;
+  faEdit = faEdit;
+  faCheck = faCheck;
+
   constructor() { }
 
   ngOnInit(): void {

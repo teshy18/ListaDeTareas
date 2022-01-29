@@ -1,5 +1,20 @@
 <div class="task">
-  <h2>{{task.tarea}}</h2>
-  <p>{{task.fecha}}</p> 
-  <fa-icon [icon]="faCoffee"></fa-icon>
+  <div>
+    <h2>{{task.tarea}}</h2>
+    <p>{{task.fecha}}</p> 
+  </div>
+  <div class="controls">
+    <fa-icon 
+      [icon]="faTimes"
+      class="faTimes"  
+    ></fa-icon>
+    <fa-icon 
+      [icon]="faEdit"
+      class="faEdit"  
+    ></fa-icon>
+    <fa-icon 
+      [icon]="faCheck"
+      class="faCheck"  
+    ></fa-icon>
+  </div>
 </div>
