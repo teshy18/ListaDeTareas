@@ -1,3 +1,7 @@
-<p *ngFor="let task of tasks" >
-  {{task.tarea}}
-</p>
+<app-task-item 
+  *ngFor="let task of tasks"
+  [task]="task"
+  class="tasks-container"
+  >
+
+</app-task-item>
