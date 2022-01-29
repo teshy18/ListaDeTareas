@@ -1,5 +1,10 @@
-.task-item{
+.task{
   background-color: #ccc;
   margin-top: 10px;
   padding: 25px 5px;
+  cursor:pointer;
+}
+
+.task.reminder{
+  border-left: 5px solid green
 }
