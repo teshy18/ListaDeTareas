@@ -1,20 +1,23 @@
 <div class="task">
   <div>
-    <h2>{{task.tarea}}</h2>
-    <p>{{task.fecha}}</p> 
+    <h2>{{task.task}}</h2>
+    <p>{{task.day}}</p> 
   </div>
   <div class="controls">
     <fa-icon 
       [icon]="faTimes"
       class="faTimes"  
+      (click)="onDelete()"
     ></fa-icon>
     <fa-icon 
       [icon]="faEdit"
       class="faEdit"  
+      (click)="onEdit()"
     ></fa-icon>
     <fa-icon 
       [icon]="faCheck"
       class="faCheck"  
+      (click)="onCheck()"
     ></fa-icon>
   </div>
 </div>

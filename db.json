@@ -17,6 +17,12 @@
       "task": "Llevar el auto al taller",
       "day": "12 de Febrero",
       "reminder": false
+    },
+    {
+      "id":4,
+      "task": "Comprar la pipeta",
+      "day": "05 de Febrero",
+      "reminder": false
     }
   ]
 }

@@ -1,7 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { faEdit, faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
 
-import { TASKS } from 'src/app/mock-tasks';
 import { Task } from '../../Task';
 
 @Component({
@@ -10,7 +9,7 @@ import { Task } from '../../Task';
   styleUrls: ['./task-item.component.css']
 })
 export class TaskItemComponent implements OnInit {
-  @Input() task:Task = TASKS[0];
+  @Input() task:Task = {task:"",day:"",reminder:true};
   faTimes = faTimes;
   faEdit = faEdit;
   faCheck = faCheck;
@@ -20,4 +19,15 @@ export class TaskItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  onDelete(){
+    console.log("Deleted")
+  }
+
+  onEdit(){
+    console.log("edited")
+  }
+
+  onCheck(){
+    console.log("checked")
+  }
 }
