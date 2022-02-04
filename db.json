@@ -1,0 +1,22 @@
+{
+  "tasks": [
+    {
+      "id":1,
+      "task": "Terminar el proyecto 'Lista de Tareas'",
+      "day": "31 de Enero",
+      "reminder": true
+    },
+    {
+      "id":2,
+      "task": "Comprar insumos de oficina",
+      "day": "27 de Enero",
+      "reminder": true
+    },
+    {
+      "id":3,
+      "task": "Llevar el auto al taller",
+      "day": "12 de Febrero",
+      "reminder": false
+    }
+  ]
+}

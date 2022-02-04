@@ -2,7 +2,6 @@
   background-color: #ccc;
   margin-top: 10px;
   padding: 10px 5px;
-  cursor:pointer;
   display: flex;
   justify-content: space-between;
   align-items: top;
@@ -24,13 +23,15 @@
 }
 
 .faTimes{
+  cursor: pointer;
   display: block;
   color:rgb(255, 17, 17);
   font-size: 1.2em;
   padding: 2px;
-}
+} 
 
 .faEdit{
+  cursor: pointer;
   display: block;
   color:rgb(0, 151, 156);
   font-size: 1.2em;
@@ -38,8 +39,9 @@
 }
 
 .faCheck{
+  cursor: pointer;
   display: block;
-  color:#09ff00;
+  color:rgb(0, 185, 0);
   font-size: 1.2em;
   padding: 2px;
 }
