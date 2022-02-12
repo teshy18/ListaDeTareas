@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { faEdit, faTimes, faCheck } from '@fortawesome/free-solid-svg-icons';
 
 import { Task } from '../../Task';
@@ -10,6 +10,8 @@ import { Task } from '../../Task';
 })
 export class TaskItemComponent implements OnInit {
   @Input() task:Task = {task:"",day:"",reminder:true};
+  @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();   
+
   faTimes = faTimes;
   faEdit = faEdit;
   faCheck = faCheck;
@@ -19,11 +21,15 @@ export class TaskItemComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  onDelete(){
-    console.log("Deleted")
+  onDelete(task:Task){
+    //console.log(task)
+    if(confirm("Esta seguro de borrar esta tarea?")){
+      console.log(`confirmado, borrar tarea ${task.id}`)
+      this.onDeleteTask.emit(task)
+    }
   }
 
-  onEdit(){
+  onEdit(): void{
     console.log("edited")
   }
 
