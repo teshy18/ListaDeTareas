@@ -1,9 +1,28 @@
 {
   "tasks": [
     {
+      "id": 2,
       "task": "Comprar la pipeta",
       "day": "05 de Febrero",
       "reminder": false
+    },
+    {
+      "id": 3,
+      "task": "Comprar la pipeta",
+      "day": "05 de Febrero",
+      "reminder": false
+    },
+    {
+      "id": 4,
+      "task": "Comprar la pipeta",
+      "day": "05 de Febrero",
+      "reminder": true
+    },
+    {
+      "id": 5,
+      "task": "Comprar la pipeta",
+      "day": "15 de Febrero",
+      "reminder": true
     }
   ]
 }

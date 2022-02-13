@@ -11,6 +11,7 @@ import { Task } from '../../Task';
 export class TaskItemComponent implements OnInit {
   @Input() task:Task = {task:"",day:"",reminder:true};
   @Output() onDeleteTask: EventEmitter<Task> = new EventEmitter();   
+  @Output() onToggleRemider: EventEmitter<Task> = new EventEmitter();
 
   faTimes = faTimes;
   faEdit = faEdit;
@@ -27,6 +28,11 @@ export class TaskItemComponent implements OnInit {
       console.log(`confirmado, borrar tarea ${task.id}`)
       this.onDeleteTask.emit(task)
     }
+  }
+
+  onToggle(task:Task){
+    console.log(task.reminder)
+    this.onToggleRemider.emit(task)
   }
 
   onEdit(): void{

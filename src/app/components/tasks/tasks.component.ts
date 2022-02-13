@@ -15,8 +15,7 @@ export class TasksComponent implements OnInit {
 
 
   constructor(
-    private tasksService: TasksService,
-    private http:HttpClient 
+    private tasksService: TasksService 
     ){}
   ;
   ngOnInit(): void {
@@ -33,6 +32,13 @@ export class TasksComponent implements OnInit {
       .subscribe(()=>{
         this.tasks = this.tasks.filter(t=>t.id != task.id)
       })
+  }
+
+  toggleRemider(task: Task){
+    task.reminder = !task.reminder;
+    this.tasksService
+      .updateTaskReminder(task)
+      .subscribe();
   }
 
 }
