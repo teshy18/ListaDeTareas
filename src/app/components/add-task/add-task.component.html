@@ -1,1 +1,33 @@
-<p>add-task works!</p>
+<div class="task-form">
+  <form (submit)="$event.preventDefault()">
+    <div class="form-section">
+      <label for="task">Agrega una Tarea</label>
+      <input [(ngModel)]="name" required id="task" name="task" type="text" placeholder="Tarea">
+    </div>
+    <div class="form-section">
+      <label for="day">Fecha</label>
+      <input [(ngModel)]="date" type="date" id="day" name="day" value="2022-01-01">
+    </div>
+    <div    class="form-section">
+      <label for="reminder">Recordar</label>
+      <input [(ngModel)]="reminder" type="radio" name="reminder" id="si" value="true" >
+      <label for="si"> Si </label>
+      <input [(ngModel)]="reminder" type="radio" name="reminder" id="no" value="false" >
+      <label for="no"> No </label>
+    </div>
+    <app-button
+      color="red"
+      text="Cancelar"
+      (btnClick)="onCancel()" 
+      >
+    </app-button>
+    <app-button 
+      color="green"
+      text="Agregar"
+      (btnClick)="onAddTask()">
+    </app-button>
+
+
+  </form>
+
+</div>
